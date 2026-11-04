@@ -11,13 +11,26 @@ const FALLBACK_EMAIL = "info@pieskirts.lv";
   if (!form) return;
   const status = document.getElementById("form-status");
   const T = (k) => (form.dataset[k] || "");
+  // Mailto body labels by page language (<html lang>): lv (default), en, ru.
+  const LANGS = {
+    lv: {labels: {name:"Vārds, uzvārds", company:"Uzņēmums", regno:"Reģ. nr.", email:"E-pasts", phone:"Tālrunis",
+      service:"Pakalpojums", link:"Saite / apraksts", deadline:"Termiņš", message:"Ziņa"},
+      consent: "Piekrītu datu apstrādei saskaņā ar privātuma politiku: jā"},
+    en: {labels: {name:"Full name", company:"Company", regno:"Reg. no.", email:"Email", phone:"Phone",
+      service:"Service", link:"Link / description", deadline:"Deadline", message:"Message"},
+      consent: "I agree to data processing under the privacy policy: yes"},
+    ru: {labels: {name:"Имя, фамилия", company:"Компания", regno:"Рег. номер", email:"E-mail", phone:"Телефон",
+      service:"Услуга", link:"Ссылка / описание", deadline:"Срок", message:"Сообщение"},
+      consent: "Согласен(-на) на обработку данных согласно политике конфиденциальности: да"}
+  };
+  const lang = (document.documentElement.lang || "lv").slice(0, 2).toLowerCase();
+  const L = LANGS[lang] || LANGS.lv;
 
   function buildMailto(fd) {
-    const labels = {name:"Vārds, uzvārds", company:"Uzņēmums", regno:"Reģ. nr.", email:"E-pasts", phone:"Tālrunis",
-      service:"Pakalpojums", link:"Saite / apraksts", deadline:"Termiņš", message:"Ziņa"};
+    const labels = L.labels;
     let body = "";
     for (const k in labels) { const v = (fd.get(k) || "").toString().trim(); if (v) body += labels[k] + ": " + v + "\n"; }
-    body += "\nPiekrītu datu apstrādei saskaņā ar privātuma politiku: jā\n";
+    body += "\n" + L.consent + "\n";
     const subj = T("subject") + " — " + (fd.get("company") || fd.get("name") || "");
     return "mailto:" + FALLBACK_EMAIL + "?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
   }
