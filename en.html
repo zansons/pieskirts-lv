@@ -142,12 +142,14 @@
   <div class="wrap">
     <h2>Request a free eligibility check</h2>
     <p class="sub">Fill in the form and we'll reply with a programme that might suit you and the next steps. The request puts you under no obligation.</p>
-    <form class="order" id="order-form" action="mailto:info@pieskirts.lv" method="post" enctype="text/plain" novalidate
+    <form class="order" id="order-form" action="https://api.web3forms.com/submit" method="POST" novalidate
       data-subject="Pieskirts.lv request (EN)"
       data-mailto-msg="Opening your email program with a prepared message. Please send it."
       data-sending-msg="Sending…"
-      data-ok-msg="Thank you! Your request has been received. We usually reply within one working day."
-      data-err-msg="Sending failed. Please try again">
+      data-ok-msg="Thank you, your request has been received! We will review it and get back to you soon."
+      data-err-msg="Could not send the request. Please try again.">
+      <input type="hidden" name="access_key" value="009d43c1-ed5f-4152-947e-ed27e5c118a8">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div><label for="f-name">Full name <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
       <div><label for="f-company">Company <span class="req" aria-hidden="true">*</span></label><input id="f-company" name="company" autocomplete="organization" required></div>
       <div><label for="f-regno">Registration number</label><input id="f-regno" name="regno" inputmode="numeric" pattern="[0-9]{11}" aria-describedby="h-regno"><div class="hint" id="h-regno">11 digits. We use it to check public register data.</div></div>
@@ -155,7 +157,7 @@
       <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
       <div><label for="f-service">Programme / service <span class="req" aria-hidden="true">*</span></label>
         <select id="f-service" name="service" required>
-          <option value="">— please choose —</option>
+          <option value="">Please choose</option>
           <option value="Atbilstības pārbaude (nezinu, kura programma)">Eligibility check (not sure which programme)</option>
           <option value="LIAA eksporta atbalsta darbību plāns">LIAA export support action plan</option>
           <option value="LIAA inovāciju vaučers">LIAA innovation voucher</option>

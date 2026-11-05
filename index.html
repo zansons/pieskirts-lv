@@ -142,13 +142,15 @@
   <div class="wrap">
     <h2>Pieteikt bezmaksas atbilstības pārbaudi</h2>
     <p class="sub">Aizpildiet formu, un mēs atbildēsim ar programmu, kas jums varētu derēt, un nākamajiem soļiem. Pieteikums jums neko neuzliek par pienākumu.</p>
-    <!-- TODO: info@pieskirts.lv pastkaste vēl NAV izveidota — pirms publicēšanas izveidot vai mainīt adresi. -->
-    <form class="order" id="order-form" action="mailto:info@pieskirts.lv" method="post" enctype="text/plain" novalidate
+    <!-- Forma: bez JS action iet uz Web3Forms; ar JS form.js sūta fetch un rāda apstiprinājumu lapā. -->
+    <form class="order" id="order-form" action="https://api.web3forms.com/submit" method="POST" novalidate
       data-subject="Pieskirts.lv pieteikums"
       data-mailto-msg="Atveram jūsu e-pasta programmu ar sagatavotu vēstuli. Lūdzu, nosūtiet to."
       data-sending-msg="Sūtām…"
-      data-ok-msg="Paldies! Pieteikums saņemts. Parasti atbildam darba dienas laikā."
-      data-err-msg="Neizdevās nosūtīt. Lūdzu, mēģiniet vēlreiz">
+      data-ok-msg="Paldies, pieteikums saņemts! Mēs to izskatīsim un sazināsimies ar jums tuvākajā laikā."
+      data-err-msg="Neizdevās nosūtīt pieteikumu. Lūdzu, mēģiniet vēlreiz.">
+      <input type="hidden" name="access_key" value="009d43c1-ed5f-4152-947e-ed27e5c118a8">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div><label for="f-name">Vārds, uzvārds <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
       <div><label for="f-company">Uzņēmums <span class="req" aria-hidden="true">*</span></label><input id="f-company" name="company" autocomplete="organization" required></div>
       <div><label for="f-regno">Reģistrācijas numurs</label><input id="f-regno" name="regno" inputmode="numeric" pattern="[0-9]{11}" aria-describedby="h-regno"><div class="hint" id="h-regno">11 cipari. Pēc tā pārbaudām publiskos reģistra datus.</div></div>
@@ -156,7 +158,7 @@
       <div><label for="f-phone">Tālrunis</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
       <div><label for="f-service">Programma / pakalpojums <span class="req" aria-hidden="true">*</span></label>
         <select id="f-service" name="service" required>
-          <option value="">— izvēlieties —</option>
+          <option value="">Izvēlieties</option>
           <option>Atbilstības pārbaude (nezinu, kura programma)</option>
           <option>LIAA eksporta atbalsta darbību plāns</option>
           <option>LIAA inovāciju vaučers</option>

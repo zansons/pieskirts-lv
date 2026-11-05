@@ -120,12 +120,14 @@
     <h2>Заказать бесплатную проверку</h2>
     <p class="sub">Заполните форму, и мы ответим, какая программа может подойти, и какие следующие шаги. Заявка ни к чему вас не обязывает.</p>
     <!-- TODO: ящик info@pieskirts.lv ещё НЕ создан. -->
-    <form class="order" id="order-form" action="mailto:info@pieskirts.lv" method="post" enctype="text/plain" novalidate
+    <form class="order" id="order-form" action="https://api.web3forms.com/submit" method="POST" novalidate
       data-subject="Pieskirts.lv заявка (RU)"
       data-mailto-msg="Открываем вашу почтовую программу с готовым письмом. Пожалуйста, отправьте его."
       data-sending-msg="Отправляем…"
-      data-ok-msg="Спасибо! Заявка получена. Обычно отвечаем в течение рабочего дня."
-      data-err-msg="Не удалось отправить. Попробуйте ещё раз">
+      data-ok-msg="Спасибо, заявка получена! Мы её рассмотрим и свяжемся с вами в ближайшее время."
+      data-err-msg="Не удалось отправить заявку. Пожалуйста, попробуйте ещё раз.">
+      <input type="hidden" name="access_key" value="009d43c1-ed5f-4152-947e-ed27e5c118a8">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div><label for="f-name">Имя, фамилия <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
       <div><label for="f-company">Компания <span class="req" aria-hidden="true">*</span></label><input id="f-company" name="company" autocomplete="organization" required></div>
       <div><label for="f-regno">Регистрационный номер</label><input id="f-regno" name="regno" inputmode="numeric" pattern="[0-9]{11}"></div>
@@ -133,7 +135,7 @@
       <div><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
       <div><label for="f-service">Программа / услуга <span class="req" aria-hidden="true">*</span></label>
         <select id="f-service" name="service" required>
-          <option value="">— выберите —</option>
+          <option value="">Выберите</option>
           <option value="Atbilstības pārbaude (nezinu, kura programma)">Проверка соответствия (не знаю, какая программа)</option>
           <option value="LIAA eksporta atbalsta darbību plāns">План поддержки экспорта LIAA</option>
           <option value="LIAA inovāciju vaučers">Инновационный ваучер LIAA</option>
