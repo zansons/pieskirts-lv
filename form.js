@@ -1,7 +1,8 @@
-/* Pieteikuma forma → FormSubmit (https://formsubmit.co/ajax/<email>).
- * Ja FormSubmit neatbild, rāda kļūdu un mailto saiti uz FALLBACK_EMAIL. */
+/* Pieteikuma forma → Web3Forms (https://api.web3forms.com/submit).
+ * Ja Web3Forms neatbild, rāda kļūdu un mailto saiti uz FALLBACK_EMAIL. */
 const FALLBACK_EMAIL = "info@pieskirts.lv";
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/" + FALLBACK_EMAIL;
+const FORM_ENDPOINT = "https://api.web3forms.com/submit";
+const W3F_ACCESS_KEY = "009d43c1-ed5f-4152-947e-ed27e5c118a8";
 
 (function () {
   const form = document.getElementById("order-form");
@@ -67,11 +68,11 @@ const FORM_ENDPOINT = "https://formsubmit.co/ajax/" + FALLBACK_EMAIL;
       deadline: (fd.get("deadline") || "").toString().trim(),
       message: (fd.get("message") || "").toString().trim(),
       consent: (fd.get("consent") || "").toString().trim(),
-      _subject: T("subject") + " — " + company,
-      _template: "table",
-      _captcha: "false",
-      _honey: "",
-      _replyto: visitorEmail
+      access_key: W3F_ACCESS_KEY,
+      subject: T("subject") + " — " + company,
+      from_name: (company || "Vietnes pieteikums"),
+      replyto: visitorEmail,
+      botcheck: ""
     };
 
     status.className = "status";
