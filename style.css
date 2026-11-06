@@ -95,3 +95,5 @@ footer .wrap{display:grid;gap:14px}
 .legal th,.legal td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 .legal th{background:var(--soft)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* small phones: keep logo, languages and CTA on one line */
+@media(max-width:480px){nav.main{flex-wrap:nowrap;gap:2px}.logo{font-size:18px;gap:6px}nav.main .lang{padding:5px 6px;font-size:13px}nav.main a.btn{padding:7px 10px!important;font-size:14px!important}}
