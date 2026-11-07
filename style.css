@@ -1,4 +1,4 @@
-/* MELNRAKSTS — nav publicēts. Viens CSS fails, bez ārējiem fontiem, bez sīkdatnēm. */
+/* Viens CSS fails, bez ārējiem fontiem, bez sīkdatnēm. */
 :root{
   --brand:#235c43; --brand-dark:#17412f; --accent:#c8902e; --tint:#e9f3ee;
   --ink:#16202a; --muted:#56616d; --line:#dfe3e8; --bg:#ffffff; --soft:#f6f7f9;
@@ -95,5 +95,7 @@ footer .wrap{display:grid;gap:14px}
 .legal th,.legal td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 .legal th{background:var(--soft)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-/* small phones: keep logo, languages and CTA on one line */
-@media(max-width:480px){nav.main{flex-wrap:nowrap;gap:2px}.logo{font-size:18px;gap:6px}nav.main .lang{padding:5px 6px;font-size:13px}nav.main a.btn{padding:7px 10px!important;font-size:14px!important}}
+/* small phones: header wraps instead of overflowing */
+@media(max-width:480px){header.top .wrap{flex-wrap:wrap;gap:6px;padding-top:6px;padding-bottom:6px}nav.main{gap:4px}.logo{font-size:18px;gap:6px}nav.main .lang{padding:5px 7px;font-size:13px}nav.main a.btn{padding:7px 10px!important;font-size:14px!important}}
+@media(max-width:374px){nav.main{width:100%;justify-content:space-between}}
+html,body{overflow-x:clip}

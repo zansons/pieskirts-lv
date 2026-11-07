@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pieskirts.lv/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pieskirts.lv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pieskirts.lv/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pieskirts.lv/ru.html"/>
+  </url>
+  <url>
+    <loc>https://pieskirts.lv/en.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pieskirts.lv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pieskirts.lv/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pieskirts.lv/ru.html"/>
+  </url>
+  <url>
+    <loc>https://pieskirts.lv/ru.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pieskirts.lv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pieskirts.lv/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pieskirts.lv/ru.html"/>
+  </url>
+  <url>
+    <loc>https://pieskirts.lv/privatuma-politika.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pieskirts.lv/privatuma-politika.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pieskirts.lv/privacy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pieskirts.lv/privacy-ru.html"/>
+  </url>
+  <url>
+    <loc>https://pieskirts.lv/privacy-en.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pieskirts.lv/privatuma-politika.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pieskirts.lv/privacy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pieskirts.lv/privacy-ru.html"/>
+  </url>
+  <url>
+    <loc>https://pieskirts.lv/privacy-ru.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://pieskirts.lv/privatuma-politika.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pieskirts.lv/privacy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pieskirts.lv/privacy-ru.html"/>
+  </url>
+</urlset>
